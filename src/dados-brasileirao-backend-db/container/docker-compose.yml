@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: db-brasileirao-container
+    image: postgres
+    hostname: banco
+    environment:
+      POSTGRES_USER: databrasileirao
+      POSTGRES_PASSWORD: databrasileirao123
+      PGDATA: /data/postgres/data-brasileirao
+    volumes:
+      - ./../scripts/1-script-tabelas.sql:/docker-entrypoint-initdb.d/1-script-tabelas.sql
+      - ./../scripts/2-script-inserts.sql:/docker-entrypoint-initdb.d/2-script-inserts.sql
+    #    - postgres:/data/postgres/data-brasileirao
+    ports:
+      - "5432:5432"
+    networks:
+      - db
+    restart: always
+
+networks:
+  db:
+    driver: bridge
+    
+# volumes:
+#     postgres:
