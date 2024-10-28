@@ -1,0 +1,33 @@
+CREATE TABLE IF NOT EXISTS public.partida_detalhe_info
+(
+
+    id integer NOT NULL,    
+    id_estadio text COLLATE pg_catalog."default",
+    id_arbitro text COLLATE pg_catalog."default",
+    id_tecnico_mandante text COLLATE pg_catalog."default",
+    id_tecnico_visitante text COLLATE pg_catalog."default",
+    publico text COLLATE pg_catalog."default",
+    publico_maximo text COLLATE pg_catalog."default",
+    colocacao_mandante text COLLATE pg_catalog."default",
+    colocacao_visitante text COLLATE pg_catalog."default",
+    valor_equipe_titular_mandante text COLLATE pg_catalog."default",
+    valor_equipe_titular_visitante text COLLATE pg_catalog."default",
+    idade_media_titular_mandante text COLLATE pg_catalog."default",
+    idade_media_titular_visitante text COLLATE pg_catalog."default",
+    gols_1_tempo_mandante text COLLATE pg_catalog."default",
+    gols_1_tempo_visitante text COLLATE pg_catalog."default",
+    escanteios_mandante text COLLATE pg_catalog."default",
+    escanteios_visitante text COLLATE pg_catalog."default",
+    faltas_mandante text COLLATE pg_catalog."default",
+    faltas_visitante text COLLATE pg_catalog."default",
+    chutes_bola_parada_mandante text COLLATE pg_catalog."default",
+    chutes_bola_parada_visitante text COLLATE pg_catalog."default",
+    defesas_mandante text COLLATE pg_catalog."default",
+    defesas_visitante text COLLATE pg_catalog."default",
+    impedimentos_mandante text COLLATE pg_catalog."default",
+    impedimentos_visitante text COLLATE pg_catalog."default",
+    chutes_mandante text COLLATE pg_catalog."default",
+    chutes_visitante text COLLATE pg_catalog."default",
+    chutes_fora_mandante text COLLATE pg_catalog."default",
+    chutes_fora_visitante text COLLATE pg_catalog."default"
+)

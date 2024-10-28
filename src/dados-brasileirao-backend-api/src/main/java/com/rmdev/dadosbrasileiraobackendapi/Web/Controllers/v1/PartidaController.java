@@ -1,5 +1,6 @@
 package com.rmdev.dadosbrasileiraobackendapi.Web.Controllers.v1;
 
+import com.rmdev.dadosbrasileiraobackendapi.Domain.Views.RodadaView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -10,11 +10,12 @@
 	</parent>
 	<groupId>com.rmdev</groupId>
 	<artifactId>dados-brasileirao-backend-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1-SNAPSHOT</version>
 	<name>dados-brasileirao-backend-api</name>
 	<description>Dados brasileirão api</description>
 	<properties>
 		<java.version>17</java.version>
+		<dir>${project.build.directory}</dir>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -42,7 +43,14 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<outputDirectory>${dir}</outputDirectory>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-
 </project>

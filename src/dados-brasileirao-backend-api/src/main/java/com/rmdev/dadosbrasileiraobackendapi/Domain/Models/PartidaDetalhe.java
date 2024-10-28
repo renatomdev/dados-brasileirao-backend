@@ -13,20 +13,20 @@ public class PartidaDetalhe {
     @JoinColumn(name="id_partida", nullable=false)
     private Partida partida;
 
-    @OneToOne
-    @JoinColumn(name="id_estadio", nullable=false)
+    @ManyToOne
+    @JoinColumn(name="id_estadio")
     private Estadio estadio;
 
-    @OneToOne
-    @JoinColumn(name="id_arbitro", nullable=false)
+    @ManyToOne
+    @JoinColumn(name="id_arbitro")
     private Arbitro arbitro;
 
-    @OneToOne
-    @JoinColumn(name="id_treinador_mandante", nullable=false)
+    @ManyToOne
+    @JoinColumn(name="id_treinador_mandante")
     private Treinador treinador_mandante;
 
-    @OneToOne
-    @JoinColumn(name="id_treinador_visitante", nullable=false)
+    @ManyToOne
+    @JoinColumn(name="id_treinador_visitante")
     private Treinador treinador_visitante;
 
     private Integer publico;
